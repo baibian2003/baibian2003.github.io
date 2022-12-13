@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      
+        #box {
+            margin-top: 50px;
+            position: absolute;
+            left: calc((50% - 300px));
+            width: 600px;
+            height: 280px;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 10px 5px #ccc;
+        }
+
+        .left {
+            width: 200px;
+            height: 270px;
+            border: 1px solid;
+            border-radius: 10px;
+            overflow: hidden;
+            float: left;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .right {
+            width: 360px;
+            float: left;
+            margin-left: 20px
+        }
+
+        a {
+            /* 清除超链接默认样式 */
+            text-decoration: none;
+            font-size: 28px;
+            /* 设置字体 */
+            font-family: '楷体';
+        }
+
+        span {
+            margin-left: 30px;
+
+        }
+
+        button {
+            width: 100px;
+            height: 40px;
+            border-radius: 10px;
+            background-color: orange;
+            margin-right: 10px;
+        }
+
+        .btn2 {
+            background-color: aliceblue;
+        }
+        .btn3{
+            width: 60px;
+            height: 24px;
+            text-align: center;
+            background-color: yellow;
+            position: absolute;
+            right: -88px;
+            color: red;
+            top: 20px;
+        }
+        .p3{
+            text-indent: 2em;
+        }
+    </style>
+</head>
+
+<body style="background-color: white;">
+
+    <div id="box">
+        <div class="left">
+            <img src="https://dss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=3542694972,4291235572&fm=179&app=35&f=JPEG?w=262&h=356&s=B421DB1712C37BEDB62054A50300E0A1"
+                alt="">
+        </div>
+
+        <div class="right">
+            <a href="https://dushu.baidu.com/pc/detail?gid=4305547728">剑来</a>
+            <span>烽火戏诸侯&emsp;著</span>
+            <hr>
+            <p>连载 | 约1100万字 | 0.05元/千字</p>
+            <p>男频 · 玄幻 · 古典仙侠</p>
+            <p class="p3">大千世界，无奇不有。 我陈平安，唯有一剑，可搬山，倒海，降妖，镇魔，敕神，摘星，断江，摧城，开天！ 我叫陈平安，平平安安的平安。我是一名剑客。</p>
+            <button class="btn1">免费试读</button>
+            <button class="btn2">加入书架</button>
+            <button class="btn3">开/关灯</button>
+        </div>
+       
+    </div>
+
+    <script>
+        document.querySelector(".btn3").onclick = function(){
+            let body = document.querySelector("body")
+            let pObjs = document.querySelectorAll("p")
+            
+            if(body.style.backgroundColor == "white"){
+                body.style.backgroundColor = "black"
+                pObjs.forEach(element => {
+                    element.style.color = "red"
+                });
+                
+            }else if(body.style.backgroundColor == "black"){
+                body.style.backgroundColor = "white"
+                pObjs.forEach(element => {
+                    element.style.color = "black"
+                });
+            }
+        }
+
+       
+       
+    </script>
+</body>
+
+</html>
